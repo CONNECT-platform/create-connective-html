@@ -1,6 +1,6 @@
 {
   "name": "@connectv/create-html",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "Initializer package for CONNECTIVE HTML projects (@connectv/html)",
   "main": "index.js",
   "bin": "initialize.js",
