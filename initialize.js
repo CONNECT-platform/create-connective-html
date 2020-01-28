@@ -20,11 +20,13 @@ if (!shell.which('npm')) {
 }
 
 let PROJECT_NAME = path.basename(shell.pwd().toString());
+let folderSwitch = false;
 
 if (process.argv.length > 2) {
   PROJECT_NAME = process.argv[2];
   shell.mkdir(`./${PROJECT_NAME}`);
   shell.cd(`./${PROJECT_NAME}`);
+  folderSwitch = true;
 }
 
 shell.echo('');
@@ -70,8 +72,11 @@ shell.echo('');
 shell.echo(chalk`{hex('76FF03') #}`);
 shell.echo(chalk`{hex('76FF03') # PROJECT SUCCESSFULLY CREATED!}`);
 shell.echo(chalk`{hex('76FF03') #}`);
+if (folderSwitch)
+  shell.echo(chalk`{hex('76FF03') # -->} run {cyan cd ${PROJECT_NAME}}`);
 shell.echo(chalk`{hex('76FF03') # -->} run {cyan npm start}`);
 shell.echo(chalk`{hex('76FF03') # -->} open a browser on {underline.magenta.bold localhost:3000}`);
 shell.echo(chalk`{hex('76FF03') # -->} check contents of {bold.gray src/} folder`);
+shell.echo(chalk`{hex('76FF03') # -->} check out {underline.magenta.bold https://github.com/CONNECT-platform/connective-html} for more information.`);
 shell.echo(chalk`{hex('76FF03') #}`);
 shell.echo('');
