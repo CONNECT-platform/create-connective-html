@@ -1,5 +1,5 @@
 # create-connective-html
-A package to help start new CONNECTIVE HTML projects
+A package to help start new [**CONNECTIVE HTML**](https://github.com/CONNECT-platform/connective-html) projects
 
 ## Usage:
 
